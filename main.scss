@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+@import '../bootstrap/scss/bootstrap';
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/utilities';
+// TODO: install npm modules and copy over animate.css then add to libs and convert to use transition var.
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
+
+// Base.
+
+  @import 'base/page';
+  @import 'base/typography';
+
+// Component.
+
+  @import 'components/404';
+  @import 'components/button';
+  @import 'components/banner';
+  @import 'components/form';
+  @import 'components/icon';
+  @import 'components/nav-bar';
+  @import 'components/section';
+  @import 'components/table';
+  @import 'components/utility-bar';
+
+// Layout
+
+  @import 'layout/header';
+  @import 'layout/main';
+  @import 'layout/footer';
+
+  // * {
+  //   border: 1px dashed red !important;
+  // }

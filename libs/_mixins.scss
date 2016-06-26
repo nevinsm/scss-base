@@ -1,0 +1,43 @@
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+@mixin icon($content: false) {
+
+	text-decoration: none;
+
+	&:before {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none ;
+
+	}
+
+}
+
+/// Creates col-0 for use with bootstrap grid system to remove spacing at various sizes.
+@mixin col-0 {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @media(min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+      @for $i from 0 through $grid-columns {
+        @if $i == 0 {
+          .col-#{$breakpoint}-#{$i} {
+            display: none;
+          }
+        }
+
+        @if $i >= 1 {
+          .col-#{$breakpoint}-#{$i} {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

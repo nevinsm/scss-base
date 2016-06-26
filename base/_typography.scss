@@ -1,0 +1,13 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+/* Typography */
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: _palette('font', 'color-heading');
+    font-weight: _font('weight-bold');
+    font-size: #{2 / _sqrt($i)}rem;
+  }
+}
